@@ -7,16 +7,16 @@ class Products {
         this.tags = tags
     }
     titleColor() {
-        return `${this.tags[this.tags.length - 1]} ${this.tags[0]}`;
+        return `${this.tags[1]} ${this.tags[0]}`;
     }
 }
 
 // Generate each items
-const chalkLicorice = new Products('Chalk Licorice', 'Licorice that looks like a white chalk', '', '18', ['confect', 'chalk', 'licorice', 'white']);
-const glaceGinger = new Products('Glace Ginger', 'Ginger in syrup juice', '', '29', ['confect', 'glace', 'ginger', 'yellow']);
-const almondGrade1 = new Products('Almond Grade 1', 'First grade almond', '', '15.80', ['almond1', 'grade', '1', 'brown']);
-const almondGrade2 = new Products('Almond Grade 2', 'Second grade almond', '', '11.50', ['almond2', 'grade', '2', 'brown']);
-const limaBeans = new Products('Lima Beans', 'White looking beans', '', '28.85', ['beans', 'lima', 'white']);
+const chalkLicorice = new Products('Chalk Licorice', 'Licorice that looks like a white chalk', '', '18', ['confect', 'white', 'licorice', 'chalk']);
+const glaceGinger = new Products('Glace Ginger', 'Ginger in syrup juice', '', '29', ['confect', 'yellow', 'ginger', 'glace', 'syrup']);
+const almondGrade1 = new Products('Almond Grade 1', 'First grade almond', '', '15.80', ['almond1', 'brown', '1', 'grade']);
+const almondGrade2 = new Products('Almond Grade 2', 'Second grade almond', '', '11.50', ['almond2', 'brown', '2', 'grade']);
+const limaBeans = new Products('Lima Beans', 'White looking beans', '', '28.85', ['beans', 'white', 'lima']);
 
 // Item Library
 const items = [chalkLicorice, glaceGinger, almondGrade1, almondGrade2, limaBeans];
