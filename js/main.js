@@ -13,10 +13,10 @@ class Products {
 
 // Generate each items
 const chalkLicorice = new Products('Chalk Licorice', 'Licorice that looks like a white chalk', 'img1', '18', ['confect', 'white', 'licorice', 'chalk']);
-const glaceGinger = new Products('Glace Ginger', 'Ginger in syrup juice', 'img1', '29', ['confect', 'yellow', 'ginger', 'glace', 'syrup']);
-const almondGrade1 = new Products('Almond Grade 1', 'First grade almond', 'img1', '15.80', ['almond1', 'brown', '1', 'grade']);
-const almondGrade2 = new Products('Almond Grade 2', 'Second grade almond', 'img1', '11.50', ['almond2', 'brown', '2', 'grade']);
-const limaBeans = new Products('Lima Beans', 'White looking beans', 'img1', '28.85', ['beans', 'white', 'lima']);
+const glaceGinger = new Products('Glace Ginger', 'Ginger in syrup juice', 'img2', '29', ['confect', 'yellow', 'ginger', 'glace', 'syrup']);
+const almondGrade1 = new Products('Almond Grade 1', 'First grade almond', 'img3', '15.80', ['almond1', 'brown', '1', 'grade']);
+const almondGrade2 = new Products('Almond Grade 2', 'Second grade almond', 'img4', '11.50', ['almond2', 'brown', '2', 'grade']);
+const limaBeans = new Products('Lima Beans', 'White looking beans', 'img5', '28.85', ['beans', 'white', 'lima']);
 
 // Item Library
 const items = [chalkLicorice, glaceGinger, almondGrade1, almondGrade2, limaBeans];

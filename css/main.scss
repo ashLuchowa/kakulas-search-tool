@@ -30,7 +30,9 @@ body {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         .main-image {
+            padding: 20px;
             img {
+                border-radius: 20px;
                 width: 100%;
                 object-fit: cover;
             }
@@ -61,11 +63,13 @@ body {
             grid-template-columns: 1fr;
             margin-bottom: 25px;
             border: 1px solid black;
-            border-radius: 10px;
+            width: 100%;
             .main-image {
+                padding: 0;
                 border-bottom: 1px solid black;
                 img {
-                    width: 97%;
+                    height: 400px;
+                    border-radius: 0;
                 }
             }
             div {
