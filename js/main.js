@@ -21,26 +21,30 @@ const items = [chalkLicorice, glaceGinger, almondGrade1, limaBeans];
 // Search Functions
 function searchMain() {
     const searchBar = document.querySelector('.search-bar');
-    displayContentUsingTags(searchBar.value);
+    displayContent(searchBar.value);
 }
 
 // Display content using tags
-function displayContentUsingTags(searchContent) {
+function displayContent(searchContent) {
     const mainContainer = document.querySelector('.main-content');
     mainContainer.textContent = '';
     
+    // Filter using tags
     const filteredItems = items.filter(item => item.tags === searchContent);
-
     filteredItems.forEach(item => {
         const itemContainer = document.createElement('div');
         itemContainer.textContent = item.title;
         mainContainer.appendChild(itemContainer);
     });
 
-    // console.log(filteredItems);
+    // Filter using texts
+    const filteredItemsDescription = items.filter(item => item.description === searchContent);
+    filteredItemsDescription.forEach(item => {
+        const itemContainer = document.createElement('div');
+        itemContainer.textContent = item.title;
+        mainContainer.appendChild(itemContainer);
+    });
 }
-
-// Display content from text inputs
 
 // Search Event Listener
 window.addEventListener('keyup', searchMain);
