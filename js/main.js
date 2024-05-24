@@ -36,10 +36,32 @@ function displayContent(searchContent) {
     const regexPattern = new RegExp(searchContent, 'i');
     const filteredItemsDescription = items.filter(item => regexPattern.test(item.tags) || regexPattern.test(item.title) || regexPattern.test(item.titleColor()));
     filteredItemsDescription.forEach(item => {
-        const itemContainer = document.createElement('div');
-        itemContainer.textContent = item.title;
-        mainContainer.appendChild(itemContainer); 
+        generateItem(item, mainContainer);
     });
+}
+
+// DOM for each items
+function generateItem(item, mainContainer) {
+    // Main Container
+    const itemContainer = document.createElement('div');
+    itemContainer.classList.add('item-container');
+    
+    // Display Title
+    const titleContainer = document.createElement('div');
+    const displayTitle = document.createElement('h1');
+    displayTitle.textContent = item.title;
+    titleContainer.appendChild(displayTitle);
+    itemContainer.appendChild(titleContainer);
+
+    // Display Description
+    const descriptionContainer = document.createElement('div');
+    const displayDescription = document.createElement('p');
+    displayDescription.textContent = item.description;
+    descriptionContainer.appendChild(displayDescription);
+    itemContainer.appendChild(descriptionContainer);
+
+    // Main container append child container
+    mainContainer.appendChild(itemContainer);
 }
 
 // Search Event Listener
