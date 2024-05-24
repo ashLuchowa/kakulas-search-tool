@@ -45,23 +45,23 @@ function generateItem(item, mainContainer) {
     // Main Container
     const itemContainer = document.createElement('div');
     itemContainer.classList.add('item-container');
-    
-    // Display Title
-    const titleContainer = document.createElement('div');
-    const displayTitle = document.createElement('h1');
-    displayTitle.textContent = item.title;
-    titleContainer.appendChild(displayTitle);
-    itemContainer.appendChild(titleContainer);
 
-    // Display Description
-    const descriptionContainer = document.createElement('div');
-    const displayDescription = document.createElement('p');
-    displayDescription.textContent = item.description;
-    descriptionContainer.appendChild(displayDescription);
-    itemContainer.appendChild(descriptionContainer);
+    // Generate each item data content
+    generateItemData(itemContainer, 'h1', item.title);
+    generateItemData(itemContainer, 'p', item.description);
+    generateItemData(itemContainer, 'h2', item.price);
 
     // Main container append child container
     mainContainer.appendChild(itemContainer);
+}
+
+// Item data function
+function generateItemData(itemContainer, contentType, itemType) {
+    const elementContainer = document.createElement('div');
+    const contentContainer = document.createElement(`${contentType}`);
+    contentContainer.textContent = itemType;
+    elementContainer.appendChild(contentContainer);
+    itemContainer.appendChild(elementContainer);
 }
 
 // Search Event Listener
