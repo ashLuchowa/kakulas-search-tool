@@ -38,7 +38,7 @@ function displayContent(searchContent) {
     });
 
     // Filter using texts
-    const filteredItemsDescription = items.filter(item => item.description === searchContent);
+    const filteredItemsDescription = items.filter(item => item.title === searchContent);
     filteredItemsDescription.forEach(item => {
         const itemContainer = document.createElement('div');
         itemContainer.textContent = item.title;
