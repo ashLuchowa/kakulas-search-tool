@@ -17,3 +17,30 @@ const limaBeans = new Products('Lima Beans', 'White looking beans', '', '28.85',
 
 // Item Library
 const items = [chalkLicorice, glaceGinger, almondGrade1, limaBeans];
+
+// Search Functions
+function searchMain() {
+    const searchBar = document.querySelector('.search-bar');
+    displayContentUsingTags(searchBar.value);
+}
+
+// Display content using tags
+function displayContentUsingTags(searchContent) {
+    const mainContainer = document.querySelector('.main-content');
+    mainContainer.textContent = '';
+    
+    const filteredItems = items.filter(item => item.tags === searchContent);
+
+    filteredItems.forEach(item => {
+        const itemContainer = document.createElement('div');
+        itemContainer.textContent = item.title;
+        mainContainer.appendChild(itemContainer);
+    });
+
+    // console.log(filteredItems);
+}
+
+// Display content from text inputs
+
+// Search Event Listener
+window.addEventListener('keyup', searchMain);
