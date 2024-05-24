@@ -1,2 +1,13 @@
 // ------------ RESET ------------ //
 @import 'reset';
+
+// ------------ MAIN CONTAINER ------------ //
+.main-content {
+    .item-container {
+        .main-image {
+            img {
+                width: 400px;
+            }
+        }
+    }
+}
