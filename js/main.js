@@ -12,11 +12,11 @@ class Products {
 }
 
 // Generate each items
-const chalkLicorice = new Products('Chalk Licorice', 'Licorice that looks like a white chalk', '', '18', ['confect', 'white', 'licorice', 'chalk']);
-const glaceGinger = new Products('Glace Ginger', 'Ginger in syrup juice', '', '29', ['confect', 'yellow', 'ginger', 'glace', 'syrup']);
-const almondGrade1 = new Products('Almond Grade 1', 'First grade almond', '', '15.80', ['almond1', 'brown', '1', 'grade']);
-const almondGrade2 = new Products('Almond Grade 2', 'Second grade almond', '', '11.50', ['almond2', 'brown', '2', 'grade']);
-const limaBeans = new Products('Lima Beans', 'White looking beans', '', '28.85', ['beans', 'white', 'lima']);
+const chalkLicorice = new Products('Chalk Licorice', 'Licorice that looks like a white chalk', 'img1', '18', ['confect', 'white', 'licorice', 'chalk']);
+const glaceGinger = new Products('Glace Ginger', 'Ginger in syrup juice', 'img1', '29', ['confect', 'yellow', 'ginger', 'glace', 'syrup']);
+const almondGrade1 = new Products('Almond Grade 1', 'First grade almond', 'img1', '15.80', ['almond1', 'brown', '1', 'grade']);
+const almondGrade2 = new Products('Almond Grade 2', 'Second grade almond', 'img1', '11.50', ['almond2', 'brown', '2', 'grade']);
+const limaBeans = new Products('Lima Beans', 'White looking beans', 'img1', '28.85', ['beans', 'white', 'lima']);
 
 // Item Library
 const items = [chalkLicorice, glaceGinger, almondGrade1, almondGrade2, limaBeans];
@@ -47,6 +47,7 @@ function generateItem(item, mainContainer) {
     itemContainer.classList.add('item-container');
 
     // Generate each item data content
+    generateItemData(itemContainer, 'img', item.image);
     generateItemData(itemContainer, 'h1', item.title);
     generateItemData(itemContainer, 'p', item.description);
     generateItemData(itemContainer, 'h2', item.price);
@@ -62,6 +63,11 @@ function generateItemData(itemContainer, contentType, itemType) {
     contentContainer.textContent = itemType;
     elementContainer.appendChild(contentContainer);
     itemContainer.appendChild(elementContainer);
+
+    if(contentType === 'img') {
+        contentContainer.setAttribute("src", `./assets/${itemType}.jpg`);
+        contentContainer.textContent = '';
+    }
 }
 
 // Search Event Listener
