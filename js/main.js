@@ -67,6 +67,7 @@ function generateItemData(itemContainer, contentType, itemType) {
     if(contentType === 'img') {
         contentContainer.setAttribute("src", `./assets/${itemType}.jpg`);
         contentContainer.textContent = '';
+        elementContainer.classList.add('main-image');
     }
 }
 
