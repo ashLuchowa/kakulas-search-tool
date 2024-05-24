@@ -55,6 +55,16 @@ table {
   padding: 10px;
 }
 
+.main-search {
+  display: flex;
+  justify-content: end;
+}
+.main-search input {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 20px;
+}
+
 .main-content {
   display: flex;
   flex-direction: column;
@@ -62,7 +72,6 @@ table {
   align-items: center;
 }
 .main-content .item-container {
-  width: 90vw;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
@@ -78,9 +87,36 @@ table {
   border: 1px solid black;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1100px) {
   .main-content .item-container {
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: 1fr;
+    margin-bottom: 25px;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  .main-content .item-container .main-image {
+    border-bottom: 1px solid black;
+  }
+  .main-content .item-container .main-image img {
+    width: 97%;
+  }
+  .main-content .item-container div {
+    border: 0;
+  }
+  .main-content .item-container div:last-child {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  .main-content .item-container:last-child {
+    margin-bottom: 0;
+  }
+  .main-content .item-container h1 {
+    padding-top: 10px;
+  }
+  .main-content .item-container p {
+    padding-bottom: 10px;
   }
 }/*# sourceMappingURL=main.css.map */

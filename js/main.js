@@ -73,3 +73,5 @@ function generateItemData(itemContainer, contentType, itemType) {
 
 // Search Event Listener
 window.addEventListener('keyup', searchMain);
+
+searchMain();
