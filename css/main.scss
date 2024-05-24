@@ -1,13 +1,42 @@
 // ------------ RESET ------------ //
 @import 'reset';
 
+// ------------ GENERAL ------------ //
+.container-fluid {
+    padding: 10px;
+}
+
 // ------------ MAIN CONTAINER ------------ //
 .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     .item-container {
+        width: 90vw;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         .main-image {
             img {
-                width: 400px;
+                width: 100%;
+                object-fit: cover;
             }
+        }
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+        }
+    }
+}
+
+// ------------ MEDIA QUERIES ------------ //
+@media (max-width: 600px) {
+    .main-content {
+        .item-container {
+            display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         }
     }
 }
