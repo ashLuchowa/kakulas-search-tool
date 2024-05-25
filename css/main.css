@@ -53,6 +53,7 @@ table {
 } 
 body {
   overflow-y: scroll;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .container-fluid {
@@ -64,9 +65,11 @@ body {
   justify-content: end;
 }
 .main-search input {
-  border: 1px solid black;
+  border: 1px solid rgb(190, 190, 190);
   border-radius: 5px;
   font-size: 20px;
+  width: 100%;
+  padding: 4px;
 }
 
 .main-content {
@@ -78,8 +81,10 @@ body {
 .main-content .item-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  border: 1px solid black;
+  background-color: white;
+  filter: drop-shadow(3px 8px 5px rgb(202, 202, 202));
   border-bottom: 0;
+  margin-bottom: 10px;
 }
 .main-content .item-container .main-image {
   padding: 20px;
@@ -94,27 +99,25 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-right: 1px solid black;
+  border-right: 2px solid rgb(230, 230, 230);
 }
 .main-content .item-container div:last-child {
   border-right: 0;
 }
-.main-content .item-container:last-child {
-  border-bottom: 1px solid black;
-}
 
 @media (max-width: 1100px) {
   .main-content .item-container {
+    background-color: white;
     position: relative;
     display: grid;
     grid-template-columns: 1fr;
     margin-bottom: 25px;
-    border: 1px solid black;
+    filter: drop-shadow(3px 8px 5px rgb(202, 202, 202));
     width: 100%;
   }
   .main-content .item-container .main-image {
     padding: 0;
-    border-bottom: 1px solid black;
+    border-bottom: 0;
   }
   .main-content .item-container .main-image img {
     height: 400px;
@@ -123,18 +126,28 @@ body {
   .main-content .item-container div {
     border: 0;
   }
-  .main-content .item-container div:last-child {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
   .main-content .item-container:last-child {
     margin-bottom: 0;
   }
+  .main-content .item-container h2 {
+    font-size: 35px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 20px 10px 10px 10px;
+    border-radius: 5px;
+  }
   .main-content .item-container h1 {
-    padding-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
   }
   .main-content .item-container p {
-    padding-bottom: 10px;
+    padding-bottom: 20px;
+    font-size: 18px;
+    color: rgb(54, 54, 54);
+  }
+  .main-content .item-container:last-child {
+    border-bottom: 0;
   }
 }/*# sourceMappingURL=main.css.map */

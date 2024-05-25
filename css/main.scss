@@ -4,6 +4,7 @@
 // ------------ GENERAL ------------ //
 body {
     overflow-y: scroll;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .container-fluid {
     padding: 10px;
@@ -14,9 +15,11 @@ body {
     display: flex;
     justify-content: end;
     input {
-        border: 1px solid black;
+        border: 1px solid rgb(190, 190, 190);
         border-radius: 5px;
         font-size: 20px;
+        width: 100%;
+        padding: 4px;
     }
 }
 
@@ -29,6 +32,8 @@ body {
     .item-container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        background-color: white;
+        filter: drop-shadow(3px 8px 5px rgb(202, 202, 202));
         .main-image {
             padding: 20px;
             img {
@@ -41,16 +46,14 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            border-right: 1px solid black;
+            border-right: 2px solid rgb(230, 230, 230);
             &:last-child {
                 border-right: 0;
             }
         }
-        border: 1px solid black;
+        // border: 1px solid black;
         border-bottom: 0;
-        &:last-child {
-            border-bottom: 1px solid black;
-        }
+        margin-bottom: 10px;
     }
 }
 
@@ -58,15 +61,16 @@ body {
 @media (max-width: 1100px) {
     .main-content {
         .item-container {
+            background-color: white;
             position: relative;
             display: grid;
             grid-template-columns: 1fr;
             margin-bottom: 25px;
-            border: 1px solid black;
+            filter: drop-shadow(3px 8px 5px rgb(202, 202, 202));
             width: 100%;
             .main-image {
                 padding: 0;
-                border-bottom: 1px solid black;
+                border-bottom: 0;
                 img {
                     height: 400px;
                     border-radius: 0;
@@ -74,20 +78,30 @@ body {
             }
             div {
                 border: 0;
-                &:last-child {
-                    position: absolute;
-                    top: 10px;
-                    right: 10px;
-                }
             }
             &:last-child {
                 margin-bottom: 0;
             }
+            h2 {
+                font-size: 35px;
+                font-weight: bold;
+                background-color: rgba($color: #ffffff, $alpha: 0.4);
+                padding: 20px 10px 10px 10px;
+                border-radius: 5px;
+            }
             h1 {
-                padding-top: 10px;
+                margin-bottom: 10px;
+                font-size: 20px;
+                text-transform: uppercase;
+                font-weight: bold;
             }
             p {
-                padding-bottom: 10px;
+                padding-bottom: 20px;
+                font-size: 18px;
+                color: rgb(54, 54, 54);
+            }
+            &:last-child {
+                border-bottom: 0;
             }
         }
     }

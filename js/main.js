@@ -48,9 +48,10 @@ function generateItem(item, mainContainer) {
 
     // Generate each item data content
     generateItemData(itemContainer, 'img', item.image);
+    generateItemData(itemContainer, 'h2', `$${item.price}/kg`);
     generateItemData(itemContainer, 'h1', item.title);
     generateItemData(itemContainer, 'p', item.description);
-    generateItemData(itemContainer, 'h2', item.price);
+    
 
     // Main container append child container
     mainContainer.appendChild(itemContainer);
